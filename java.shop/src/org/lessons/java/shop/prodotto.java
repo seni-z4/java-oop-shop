@@ -28,9 +28,9 @@ public class prodotto {
 	private int iva;
 	
 
-	public prodotto() {
-		 this.codice = numeroRandom();
-	}
+//	public prodotto() {
+//		 this.codice = numeroRandom();
+//	}
 
 	public String stampaProdotto() {
 		return codice + nome + descrizione;
@@ -49,12 +49,24 @@ public class prodotto {
 	
 	
 	public double getCodice() {
-		return codice;
+		return rand;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 	public String getNome() {
 		return nome;
+	}
+	public String getdescrizione() {
+		return descrizione;
+	}
+	public String setdescrizione(String descrizione) {
+		return this.descrizione = descrizione;
+	}
+	public int getPrezzo() {
+		return prezzo;
+	}
+	public int setPrezzo(int price) {
+		return this.prezzo = prezzo;
 	}
 }

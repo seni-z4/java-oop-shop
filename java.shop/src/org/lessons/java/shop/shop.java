@@ -10,9 +10,14 @@ public class shop {
 
 //		products.newProdotti() = 34 , 33;
 		Scanner input = new Scanner(System.in);
-		products = input.nextLine();
 
-		System.out.println(products.numeroRandom());
+		System.out.println("insert the name");
+		products.setNome(input.nextLine());
+
+		System.out.println(products.getNome()); 
+		System.out.println(products.getCodice());
+		System.out.println(products.getCodice());
+
 
 	}
 

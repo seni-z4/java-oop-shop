@@ -44,8 +44,12 @@ public class prodotto {
 //	}
 	
 	Random random = new Random();
+	int upperbound = 10000;
+	
+	int min = 1;
+	int max = 10000;
 
-	int rand = random.nextInt();
+	int rand = random.nextInt(random.nextInt(max - min + 1) + min);
 	
 	
 	public double getCodice() {

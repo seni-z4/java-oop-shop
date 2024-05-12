@@ -73,4 +73,5 @@ public class prodotto {
 	public int setPrezzo(int price) {
 		return this.prezzo = prezzo;
 	}
+	
 }

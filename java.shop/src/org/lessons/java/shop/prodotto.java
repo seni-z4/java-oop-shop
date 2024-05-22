@@ -20,58 +20,119 @@ public class prodotto {
 	 * Main con metodo main nella quale testate tutte le funzionalità della classe
 	 * Prodotto.
 	 */
+//
+//	private double codice;
+//	private String nome;
+//	private String descrizione;
+//	private int prezzo;
+//	private int iva;
+//	
+//
+////	public prodotto() {
+////		 this.codice = numeroRandom();
+////	}
+//
+//	public String stampaProdotto() {
+//		return codice + nome + descrizione;
+//	}
+//
+//	public int getPrezzoIva() {
+//		return prezzo + iva;
+//	}
+//
+////	public int numeroRandom() {
+////	}
+//	
+//	Random random = new Random();
+//	int upperbound = 10000;
+//	
+//	int min = 1;
+//	int max = 10000;
+//
+//	int rand = random.nextInt(random.nextInt(max - min + 1) + min);
+//	
+//	
+//	public double getCodice() {
+//		return rand;
+//	}
+//	public void setNome(String nome) {
+//		this.nome = nome;
+//	}
+//	public String getNome() {
+//		return nome;
+//	}
+//	public String getdescrizione() {
+//		return descrizione;
+//	}
+//	public String setdescrizione(String descrizione) {
+//		return this.descrizione = descrizione;
+//	}
+//	public int getPrezzo() {
+//		return prezzo;
+//	}
+//	public int setPrezzo(int price) {
+//		return this.prezzo = prezzo;
+//	}
 
 	private double codice;
 	private String nome;
-	private String descrizione;
+	private String description;
 	private int prezzo;
 	private int iva;
-	
 
-//	public prodotto() {
-//		 this.codice = numeroRandom();
-//	}
+	// codice valorizato con un numero random
+	public int randomNumber() {
+		Random random = new Random();
+		int upperbound = 10000;
 
-	public String stampaProdotto() {
-		return codice + nome + descrizione;
-	}
+		int min = 1;
+		int max = 10000;
 
-	public int getPrezzoIva() {
-		return prezzo + iva;
-	}
+		int rand = random.nextInt(random.nextInt(max - min + 1) + min);
 
-//	public int numeroRandom() {
-//	}
-	
-	Random random = new Random();
-	int upperbound = 10000;
-	
-	int min = 1;
-	int max = 10000;
-
-	int rand = random.nextInt(random.nextInt(max - min + 1) + min);
-	
-	
-	public double getCodice() {
 		return rand;
+
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public int ivaCal() {
+		int finalPrice = (this.prezzo * 22) / 100;
+		return finalPrice;
+
 	}
+
+	public int getCodice() {
+		return randomNumber();
+	}
+
+	// get&set di nome
 	public String getNome() {
 		return nome;
 	}
-	public String getdescrizione() {
-		return descrizione;
+
+	public void setNome(String nomeProdotto) {
+		this.nome = nomeProdotto;
 	}
-	public String setdescrizione(String descrizione) {
-		return this.descrizione = descrizione;
+
+	// get&set desciption
+	public String getDescription() {
+		return description;
 	}
+
+	public void setDescription(String descriptionProdotto) {
+		this.description = descriptionProdotto;
+	}
+
+	// get&set prezzo;
 	public int getPrezzo() {
 		return prezzo;
 	}
-	public int setPrezzo(int price) {
-		return this.prezzo = prezzo;
+
+	public void setPrezzo(int prezzoProdotto) {
+		this.prezzo = prezzoProdotto;
 	}
-	
+
+	// get iva;
+	public int getIva() {
+		return ivaCal();
+	}
 }
